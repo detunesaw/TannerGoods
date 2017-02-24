@@ -1,1 +1,11 @@
-@import "_fonts.scss";
+@import "core/_reset.scss";
+@import "core/_fonts.scss";
+@import "core/_variables.scss";
+
+@import "_base.scss";
+
+@import "components/_slider.scss";
+
+@import "blocks/_top.scss";
+@import "blocks/_voyager.scss";
+@import "blocks/_drifter.scss";

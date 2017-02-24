@@ -1,0 +1,167 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$icon-arch-down-name: 'icon-arch-down';
+$icon-arch-down-x: 0px;
+$icon-arch-down-y: 0px;
+$icon-arch-down-offset-x: 0px;
+$icon-arch-down-offset-y: 0px;
+$icon-arch-down-width: 32px;
+$icon-arch-down-height: 156px;
+$icon-arch-down-total-width: 142px;
+$icon-arch-down-total-height: 156px;
+$icon-arch-down-image: '../images/sprite.png';
+$icon-arch-down: (0px, 0px, 0px, 0px, 32px, 156px, 142px, 156px, '../images/sprite.png', 'icon-arch-down', );
+$icon-arch-right-name: 'icon-arch-right';
+$icon-arch-right-x: 32px;
+$icon-arch-right-y: 0px;
+$icon-arch-right-offset-x: -32px;
+$icon-arch-right-offset-y: 0px;
+$icon-arch-right-width: 81px;
+$icon-arch-right-height: 53px;
+$icon-arch-right-total-width: 142px;
+$icon-arch-right-total-height: 156px;
+$icon-arch-right-image: '../images/sprite.png';
+$icon-arch-right: (32px, 0px, -32px, 0px, 81px, 53px, 142px, 156px, '../images/sprite.png', 'icon-arch-right', );
+$icon-arrow-down-big-name: 'icon-arrow-down-big';
+$icon-arrow-down-big-x: 32px;
+$icon-arrow-down-big-y: 53px;
+$icon-arrow-down-big-offset-x: -32px;
+$icon-arrow-down-big-offset-y: -53px;
+$icon-arrow-down-big-width: 50px;
+$icon-arrow-down-big-height: 29px;
+$icon-arrow-down-big-total-width: 142px;
+$icon-arrow-down-big-total-height: 156px;
+$icon-arrow-down-big-image: '../images/sprite.png';
+$icon-arrow-down-big: (32px, 53px, -32px, -53px, 50px, 29px, 142px, 156px, '../images/sprite.png', 'icon-arrow-down-big', );
+$icon-arrow-left-name: 'icon-arrow-left';
+$icon-arrow-left-x: 113px;
+$icon-arrow-left-y: 0px;
+$icon-arrow-left-offset-x: -113px;
+$icon-arrow-left-offset-y: 0px;
+$icon-arrow-left-width: 29px;
+$icon-arrow-left-height: 48px;
+$icon-arrow-left-total-width: 142px;
+$icon-arrow-left-total-height: 156px;
+$icon-arrow-left-image: '../images/sprite.png';
+$icon-arrow-left: (113px, 0px, -113px, 0px, 29px, 48px, 142px, 156px, '../images/sprite.png', 'icon-arrow-left', );
+$icon-arrow-right-active-name: 'icon-arrow-right-active';
+$icon-arrow-right-active-x: 113px;
+$icon-arrow-right-active-y: 96px;
+$icon-arrow-right-active-offset-x: -113px;
+$icon-arrow-right-active-offset-y: -96px;
+$icon-arrow-right-active-width: 19px;
+$icon-arrow-right-active-height: 34px;
+$icon-arrow-right-active-total-width: 142px;
+$icon-arrow-right-active-total-height: 156px;
+$icon-arrow-right-active-image: '../images/sprite.png';
+$icon-arrow-right-active: (113px, 96px, -113px, -96px, 19px, 34px, 142px, 156px, '../images/sprite.png', 'icon-arrow-right-active', );
+$icon-arrow-right-small-name: 'icon-arrow-right-small';
+$icon-arrow-right-small-x: 113px;
+$icon-arrow-right-small-y: 130px;
+$icon-arrow-right-small-offset-x: -113px;
+$icon-arrow-right-small-offset-y: -130px;
+$icon-arrow-right-small-width: 13px;
+$icon-arrow-right-small-height: 19px;
+$icon-arrow-right-small-total-width: 142px;
+$icon-arrow-right-small-total-height: 156px;
+$icon-arrow-right-small-image: '../images/sprite.png';
+$icon-arrow-right-small: (113px, 130px, -113px, -130px, 13px, 19px, 142px, 156px, '../images/sprite.png', 'icon-arrow-right-small', );
+$icon-arrow-right-name: 'icon-arrow-right';
+$icon-arrow-right-x: 113px;
+$icon-arrow-right-y: 48px;
+$icon-arrow-right-offset-x: -113px;
+$icon-arrow-right-offset-y: -48px;
+$icon-arrow-right-width: 29px;
+$icon-arrow-right-height: 48px;
+$icon-arrow-right-total-width: 142px;
+$icon-arrow-right-total-height: 156px;
+$icon-arrow-right-image: '../images/sprite.png';
+$icon-arrow-right: (113px, 48px, -113px, -48px, 29px, 48px, 142px, 156px, '../images/sprite.png', 'icon-arrow-right', );
+$icon-arrow-up-big-name: 'icon-arrow-up-big';
+$icon-arrow-up-big-x: 32px;
+$icon-arrow-up-big-y: 82px;
+$icon-arrow-up-big-offset-x: -32px;
+$icon-arrow-up-big-offset-y: -82px;
+$icon-arrow-up-big-width: 50px;
+$icon-arrow-up-big-height: 29px;
+$icon-arrow-up-big-total-width: 142px;
+$icon-arrow-up-big-total-height: 156px;
+$icon-arrow-up-big-image: '../images/sprite.png';
+$icon-arrow-up-big: (32px, 82px, -32px, -82px, 50px, 29px, 142px, 156px, '../images/sprite.png', 'icon-arrow-up-big', );
+$spritesheet-width: 142px;
+$spritesheet-height: 156px;
+$spritesheet-image: '../images/sprite.png';
+$spritesheet-sprites: ($icon-arch-down, $icon-arch-right, $icon-arrow-down-big, $icon-arrow-left, $icon-arrow-right-active, $icon-arrow-right-small, $icon-arrow-right, $icon-arrow-up-big, );
+$spritesheet: (142px, 156px, '../images/sprite.png', $spritesheet-sprites, );
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

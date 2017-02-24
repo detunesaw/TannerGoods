@@ -27,10 +27,10 @@ gulp.task('server', function() {
         port: "7777"
     });
 
-    gulp.watch(['./pages/*.html']).on('change', browserSync.reload);
+    gulp.watch(['./templates/*.html']).on('change', browserSync.reload);
     gulp.watch('./js/**/*.js').on('change', browserSync.reload);
 
-    gulp.watch('./templates/pages/*.html', ['fileinclude']);
+    gulp.watch('./templates/*.html', ['fileinclude']);
 
     gulp.watch('./sass/**/*', ['sass']);
 });
@@ -58,7 +58,7 @@ gulp.task('fileinclude', function() {
       basepath: '@file'
     }).on('error', gutil.log))
     .on('error', notify.onError())
-    .pipe(gulp.dest('pages/'))
+    .pipe(gulp.dest('./'))
 });
 
 /*
@@ -129,14 +129,14 @@ gulp.task('clean', function() {
 gulp.task('sprite', function () {
     var spriteData = gulp.src('images/sprite/*').pipe(
         spritesmith({
-            imgName: 'sprite.png',
+            imgName: '../images/sprite.png',
             cssName: '_icon-mixin.scss',
-            retinaImgName: 'sprite@2x.png',
-            retinaSrcFilter: ['images/sprite/*@2x.png'],
+            // retinaImgName: 'sprite@2x.png',
+            // retinaSrcFilter: ['images/sprite/*@2x.png'],
             cssVarMap: function (sprite) {
                 sprite.name = 'icon-' + sprite.name;
             }
-        })
+        }).on('error', gutil.log)
     );
 
     var imgStream = spriteData.img.pipe(gulp.dest('images/'));

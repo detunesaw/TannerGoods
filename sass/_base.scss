@@ -1,8 +1,13 @@
-section {
+html, body {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+}
+
+.section {
 	// max-width: 1800px;
 	margin: 0 auto 10% auto;
 	padding: 0 1%;
-	position: relative;
 }
 
 img {
@@ -12,6 +17,13 @@ img {
 a {
 	text-decoration: none;
 	cursor: pointer;
+	color: #383838;
+	font-family: Montserrat;
+	font-size: 14px;
+	font-weight: 700;
+	text-transform: uppercase;
+	display: inline-block;
+	vertical-align: middle;
 }
 
 .clearfix::after
@@ -24,7 +36,6 @@ a {
 }
 
 h1 {
-	display: inline-block;
 	text-shadow: 5px 26px 81px rgba(0, 15, 26, 0);
 	color: #292929;
 	font-family: Montserrat;
@@ -36,7 +47,6 @@ h1 {
 }
 
 h2 {
-	display: inline-block;
 	@extend h1;
 	color: white;
 }
@@ -47,7 +57,26 @@ h3 {
 	font-family: Montserrat;
 	font-size: 18px;
 	font-weight: 400;
-	padding-bottom: 20px;
+	margin-bottom: 20px;
+}
+
+h4 {
+	color: #383838;
+	font-family: Montserrat;
+	font-size: 48px;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: center;
+	letter-spacing: 15px;
+}
+
+h5 {
+	color: #383838;
+	font-family: Montserrat;
+	font-size: 22px;
+	letter-spacing: 5px;
+	font-weight: bold;
+	text-transform: uppercase;
 }
 
 p {
@@ -56,8 +85,4 @@ p {
 	font-weight: 400;
 	line-height: 30px;
 	font-family: Montserrat;
-}
-
-a {
-	cursor: pointer;
 }

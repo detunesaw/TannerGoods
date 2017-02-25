@@ -1,4 +1,4 @@
-.sect1 {
+.section-top {
 	background: url('../images/home-slider.png') no-repeat 100%;
 	-webkit-background-size: 70% 100%;
 	     -o-background-size: 70% 100%;
@@ -120,8 +120,6 @@
 }
 
 .title__link {
-	display: inline-block;
-	vertical-align: middle;
 	color: $dark-flesh;
 	font-family: 'Montserrat';
 	font-size: 18px;

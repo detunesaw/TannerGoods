@@ -1,0 +1,161 @@
+.section-tanner {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+// SECTION TOP
+
+.tanner-subtitle {
+	position: relative;
+	left: 55%;
+	background-color: rgba($dark-flesh, 0.42);
+	padding-bottom: 0;
+	padding: 0.3% 20% 0.3% 0;
+	color: #6d6555;
+}
+
+.tanner-subtitle::before {
+	content: '';
+	display: inline-block;
+	width: 100px;
+	vertical-align: middle;
+	margin-right: 10px;
+	border-bottom: 1px solid black;
+}
+
+// SHIT TANNER
+
+.tanner-1,
+.tanner-2,
+.tanner-3,
+.tanner-4 {
+	display: table;
+	width: 100%;
+	position: relative;
+}
+
+.tanner-2 {
+	min-height: 350px;
+	top: -100px;
+}
+
+.tanner-4 {
+	@extend .tanner-2;
+}
+
+// SHIT IMAGES
+
+.tanner-1__image,
+.tanner-2__image,
+.tanner-3__image, {
+	display: table-cell;
+	vertical-align: middle;
+	width: 45%;
+}
+
+.tanner-1__image {
+	width: 65%;
+}
+
+.tanner-3__image {
+	position: relative;
+	z-index: 2;
+}
+
+.tanner-4__image {
+	@extend .clearfix::after;
+	@extend .tanner-3__image;
+	float: right;
+	width: 60%;
+	position: relative;
+	z-index: 0;
+}
+
+// SHIT TEXT
+
+.tanner-1__text,
+.tanner-2__text,
+.tanner-3__text,
+.tanner-4__text,
+.tanner__title-white
+ {
+	padding-left: 5%;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.tanner-2__text {
+	vertical-align: bottom;
+}
+
+.to-right {
+	padding-left: 30%;
+}
+
+.to-right--2 {
+	padding-left: 10%;
+	vertical-align: top;
+}
+
+// SHIT BOTTOM TEXT
+
+.text-title {
+	padding-bottom: 10px;
+}
+
+.text__passage {
+	display: inline-block;
+	color: #383838;
+	font-family: Roboto;
+	font-size: 16px;
+	font-weight: 100;
+	line-height: 28px;
+	padding-bottom: 20px;
+}
+
+.text__link::after {
+	content: '';
+	display: inline-block;
+	width: 13px;
+	height: 19px;
+	vertical-align: middle;
+	margin-left: 10px;
+	background: url('../images/sprite.png') -113px -130px no-repeat;
+	transform: scale(0.6);
+}
+
+.tanner__title-white {
+	position: absolute;
+	z-index: 2;
+	text-shadow: 0px 13px 38px rgba(0, 15, 26, 0.27);
+	color: #ffffff;
+	font-family: 'Montserrat';
+	font-size: 48px;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 30px;
+	top: 51%;
+    left: 1%;
+}
+
+.slider-2 {
+	padding: 0 0 7% 5%;
+
+}
+
+.slider-2__image {
+	display: inline-block;
+	width: 145px;
+	min-width: 7%;
+}
+
+.darken {
+	display: inline-block;
+    background: black;
+    font-size: 0;
+    margin: 2%;
+}
+
+.slider-2__image:hover {
+	opacity: 0.5;
+}

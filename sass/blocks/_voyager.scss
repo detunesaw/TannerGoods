@@ -1,4 +1,4 @@
-.sect2 {
+.section-voyager {
 	background: url('../images/voyager.png') no-repeat 0%;
 	-webkit-background-size: 70% 100%;
 	     -o-background-size: 70% 100%;
@@ -33,6 +33,7 @@
 	padding: 5% 5% 5% 0; 
 	transform: translateY(-50%);
 	border: 3px solid $dark-flesh;
+	max-width: 800px;
 	
 }
 

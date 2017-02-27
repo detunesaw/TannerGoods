@@ -1,29 +1,36 @@
-html, body {
-	height: 100%;
-	width: 100%;
-	margin: 0;
+html,
+body
+{
+    // width: 100%;
+    // height: 100%;
+    // margin: 0;
+    // overflow-x: hidden;
 }
 
-.section {
-	// max-width: 1800px;
-	margin: 0 auto 10% auto;
-	padding: 0 1%;
+.section
+{
+    max-width: 1600px;
+    margin: 0 auto 10% auto;
 }
 
-img {
-	width: 100%;
+img
+{
+    width: 100%;
 }
 
-a {
-	text-decoration: none;
-	cursor: pointer;
-	color: #383838;
-	font-family: Montserrat;
-	font-size: 14px;
-	font-weight: 700;
-	text-transform: uppercase;
-	display: inline-block;
-	vertical-align: middle;
+a
+{
+    font-family: 'Montserrat';
+    font-size: 14px;
+    font-weight: 700;
+    display: inline-block;
+
+    cursor: pointer;
+    vertical-align: middle;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    color: $light-grey-text;
 }
 
 .clearfix::after
@@ -35,54 +42,72 @@ a {
     content: '';
 }
 
-h1 {
-	text-shadow: 5px 26px 81px rgba(0, 15, 26, 0);
-	color: #292929;
-	font-family: Montserrat;
-	font-size: 40px;
-	font-weight: bold;
-	text-transform: uppercase;
-	letter-spacing: 5px;
-	padding-bottom: 40px;
+h1
+{
+    font-family: 'Montserrat';
+    font-size: 44px;
+    font-weight: bold;
+
+    padding-bottom: 40px;
+
+    letter-spacing: 5px;
+    text-transform: uppercase;
+
+    color: #292929;
+    text-shadow: 5px 26px 81px rgba(0, 15, 26, 0);
 }
 
-h2 {
-	@extend h1;
-	color: white;
+h2
+{
+    color: white;
+
+    @extend h1;
 }
 
-h3 {
-	display: inline-block;
-	color: $light-grey-text;
-	font-family: Montserrat;
-	font-size: 18px;
-	font-weight: 400;
-	margin-bottom: 20px;
+h3
+{
+    font-family: 'Montserrat';
+    font-size: 18px;
+    font-weight: 400;
+
+    display: inline-block;
+
+    margin-bottom: 20px;
+
+    color: $light-grey-text;
 }
 
-h4 {
-	color: #383838;
-	font-family: Montserrat;
-	font-size: 48px;
-	font-weight: bold;
-	text-transform: uppercase;
-	text-align: center;
-	letter-spacing: 15px;
+h4
+{
+    font-family: 'Montserrat';
+    font-size: 48px;
+    font-weight: bold;
+
+    text-align: center;
+    letter-spacing: 15px;
+    text-transform: uppercase;
+
+    color: $light-grey-text;
 }
 
-h5 {
-	color: #383838;
-	font-family: Montserrat;
-	font-size: 22px;
-	letter-spacing: 5px;
-	font-weight: bold;
-	text-transform: uppercase;
+h5
+{
+    font-family: 'Montserrat';
+    font-size: 22px;
+    font-weight: bold;
+
+    letter-spacing: 5px;
+    text-transform: uppercase;
+
+    color: $light-grey-text;
 }
 
-p {
-	color: #a7a7a7;
-	font-size: 10px;
-	font-weight: 400;
-	line-height: 30px;
-	font-family: Montserrat;
+p
+{
+    font-family: 'Montserrat';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 30px;
+
+    color: $grey-passage;
 }

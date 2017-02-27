@@ -1,8 +1,8 @@
-.section-top {
+.section-1 {
 	background: url('../images/home-slider.png') no-repeat 100%;
-	-webkit-background-size: 70% 100%;
-	     -o-background-size: 70% 100%;
-	        background-size: 70% 100%;
+	-webkit-background-size: 65% 100%;
+	     -o-background-size: 65% 100%;
+	        background-size: 65% 100%;
 }
 
 // NAVIGATION
@@ -10,25 +10,25 @@
 .top {
 	display: table;
 	width: 100%;
-	padding-bottom: 5%;
+	margin-bottom: 5%;
 }
 
 .top__logo {
-	width: 100px;
+	padding-left: 1%;
+	width: 170px;
 	display: table-cell;
 }
 
 .top__navigation {
 	display: table-cell;
 	vertical-align: middle;
-	padding-left: 5%;
+	padding-left: 4%;
 }
 
 .navigation__link {
-	margin: 0 2%;
+	margin: 0 1%;
 	font-family: 'MullerExtraBoldDemo';
-	font-size: 12px;
-	text-transform: uppercase;
+	font-size: 14px;
 	color: black;
 }
 
@@ -63,33 +63,40 @@
 // SLIDER
 
 .slider {
+	padding-left: 1%;
 	position: absolute;
-	width: 100px;
+	width: 170px;
 }
 
 .slider__navigationUp {
 	cursor: pointer;
 	width: 50px;
 	height: 29px;
-	margin-left: 24px;
+	margin-left: 59px;
 	background: url('../images/sprite.png') -32px -82px no-repeat;
 	transform: scale(0.4);
 	margin-bottom: 10px;
 }
 
-
 .slider__navigationDown {
 	@extend .slider__navigationUp;
 	background: url('../images/sprite.png') -32px -53px no-repeat;
-	margin-bottom: 50px;
+	margin-bottom: 100px;
 }
 
 .slider__navigationDown::after {
-
+	content: '';
+	position: absolute;
+	height: 130px;
+	vertical-align: middle;
+	margin-right: 10px;
+	border-right: 3px solid $dark-flesh;
+	top: 250%;
+	right: 25%;
 }
 
 .slider__button {
-	color: #878787;
+	color: $grey;
 	font-family: 'Montserrat';
 	font-size: 14px;
 	font-weight: 700;
@@ -107,7 +114,7 @@
 	        border-radius: 100px;
 	box-shadow: 5px 26px 81px rgba(0, 15, 26, 0.21);
 	background-color: rgba(135, 135, 135, 0);
-	color: #000000;
+	color: black;
 	font-size: 32px;
 	font-weight: 400;
 	margin: 0 auto 40% auto;
@@ -124,7 +131,7 @@
 	font-family: 'Montserrat';
 	font-size: 18px;
 	font-weight: 400;
-	padding-left: 7%;
+	padding-left: 5%;
 }
 
 .title__link::before {

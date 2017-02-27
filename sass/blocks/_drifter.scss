@@ -1,8 +1,8 @@
-.section-drifter {
-	background: $light-grey-bg url('../../images/drifter.png') no-repeat 100%;
-	-webkit-background-size: 70% 100%;
-	     -o-background-size: 70% 100%;
-	        background-size: 70% 100%;
+.section-3 {
+	background: $light-grey-bg url('../images/drifter.png') no-repeat 100%;
+	-webkit-background-size: 65% 100%;
+	     -o-background-size: 65% 100%;
+	        background-size: 65% 100%;
 }
 
 .drifter {
@@ -11,29 +11,21 @@
 }
 
 .drifter__title {
-	z-index: 2;
- 	position: absolute;
-	top: 50%;
-	width: 50%;
-	padding-left: 35%;
+	@extend .voyager__title;
+
+	margin-left: 38%;
 	text-align: left;
-	transform: translateY(-50%);
 }
 
 .drifter__passage {
-	position: absolute;
-	top: 50%;
-	left: 0;
-	width: 60%;
-	padding: 5% 0% 5% 5%; 
-	transform: translateY(-50%);
-	border: 3px solid $dark-flesh;
-	max-width: 800px;
+	@extend .voyager__passage;
 	
+	padding: 5% 0% 5% 5%; 
+	left: 1%;
 }
 
 .drifter__passage--right {
-	padding-right: 65%;
+	padding-right: 60%;
 }
 
 .drifter__passage::after {

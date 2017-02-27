@@ -1,65 +1,81 @@
-.section-voyager {
-	background: url('../images/voyager.png') no-repeat 0%;
-	-webkit-background-size: 70% 100%;
-	     -o-background-size: 70% 100%;
-	        background-size: 70% 100%;
+.section-2 {
+	background: url('../images/voyager.png') no-repeat 0;
+	-webkit-background-size: 65% 100%;
+	     -o-background-size: 65% 100%;
+	        background-size: 65% 100%;
 }
 
-.voyager {
-	position: relative;
-	padding: 270px 0;
+.voyager
+{
+    position: relative;
+
+    padding: 270px 0;
 }
 
-.title__description {
-	color: white;
-	
+.voyager__title
+{
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+
+    width: 50%;
+    margin-left: 12%;
+
+    transform: translateY(-50%);
+    text-align: right;
 }
 
-.voyager__title {
-	z-index: 2;
- 	position: absolute;
-	top: 50%;
-	width: 50%;
-	padding-left: 15%;
-	text-align: right;
-	transform: translateY(-50%);
+.title__description
+{
+    color: white;
 }
 
-.voyager__passage {
-	position: absolute;
-	top: 50%;
-	right: 0;
-	width: 60%;
-	padding: 5% 5% 5% 0; 
-	transform: translateY(-50%);
-	border: 3px solid $dark-flesh;
-	max-width: 800px;
-	
+.voyager__passage
+{
+    position: absolute;
+    top: 50%;
+    right: 1%;
+
+    width: 60%;
+    max-width: 800px;
+    padding: 5% 5% 5% 0;
+
+    transform: translateY(-50%);
+
+    border: 3px solid $dark-flesh;
 }
 
-.voyager__passage--left {
-	padding-left: 65%;
+.voyager__passage--left
+{
+    margin-left: 60%;
 }
 
-.voyager__passage::after {
-	content: "";
-	position: absolute;
-	bottom:-4px;
+.voyager__passage::after
+{
+    position: absolute;
     right: 13%;
-    width: 200px;
+    bottom: -4px;
+
+    width: 20%;
     height: 10px;
-    background-color: white;  
+
+    content: '';
+
+    background-color: white;
 }
 
-.voyager__passage::before {
-	z-index: 1;
-	content: '';
-	display: inline-block;
-	position: absolute;
-	width: 32px;
-	height: 156px;
-	background: url('../images/sprite.png') 0px 0px no-repeat;
-	transform: scale(0.4);
-	bottom: -35%;
+.voyager__passage::before
+{
+    position: absolute;
+    z-index: 1;
     right: 21%;
+    bottom: -29%;
+
+    width: 32px;
+    height: 156px;
+
+    content: '';
+    transform: scale(.4);
+
+    background: url('../images/sprite.png') 0 0 no-repeat;
 }

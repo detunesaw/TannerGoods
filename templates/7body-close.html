@@ -1,2 +1,13 @@
+  
+  <script>
+    $(function() {
+    $(".gallery-nav__item").click(function() {
+    $(".gallery-nav__item--hover").removeClass("gallery-nav__item--hover");
+    $(".slide-active").removeClass("slide-active");
+    $(this).addClass("gallery-nav__item--hover slide-active");
+  });
+});
+  </script>
+
 </body>
 </html>

@@ -1,13 +1,13 @@
 .section-tanner {
 	max-width: 1200px;
-	margin: 0 auto;
+	margin: 5% auto 0;
 }
 
 // SECTION TOP
 
 .tanner-subtitle {
 	position: relative;
-	left: 55%;
+	left: 65%;
 	background-color: rgba($dark-flesh, 0.42);
 	padding-bottom: 0;
 	padding: 0.3% 15% 0.3% 0;
@@ -15,6 +15,8 @@
 }
 
 .tanner-subtitle::before {
+	position: absolute;
+	margin: 9px 0 0 -115px;
 	content: '';
 	display: inline-block;
 	width: 100px;
@@ -36,7 +38,8 @@
 
 .tanner-2 {
 	min-height: 350px;
-	top: -100px;
+	margin-top: -100px;
+	// top: -100px;
 }
 
 .tanner-4 {
@@ -68,6 +71,7 @@
 	float: right;
 	width: 60%;
 	z-index: 0;
+	margin-right: 10%;
 }
 
 .tanner-1__image::before {
@@ -80,14 +84,13 @@
 	text-transform: uppercase;
 	letter-spacing: 10px;
 	position: absolute;
-	top: -6%;
-	left: 3%;
+	margin: -2.5% 0 0 3%;
+
 }
 
 .tanner-1__image::after {
 	content: '';
-	top: -1%;
-	left: 10%;
+	margin: -45% 0 0 10%;
 	position: absolute;
 	width: 150px;
 	vertical-align: middle;

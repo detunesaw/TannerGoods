@@ -1,8 +1,19 @@
-.section-1 {
+.section-1::before {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	width: 65%;
+	right: 0;
+	height: 85%;
+	display: inline-block;
 	background: url('../images/home-slider.png') no-repeat 100%;
-	-webkit-background-size: 65% 100%;
-	     -o-background-size: 65% 100%;
-	        background-size: 65% 100%;
+	-webkit-background-size: cover;
+	     -o-background-size: cover;
+	        background-size: cover;
+}
+
+.section-1 {
+	padding-bottom: 100px;
 }
 
 // NAVIGATION
@@ -117,7 +128,7 @@
 	color: black;
 	font-size: 32px;
 	font-weight: 400;
-	margin: 0 auto 40% auto;
+	margin: 0 auto 20% auto;
 }
 
 // TITLE

@@ -1,13 +1,27 @@
+.section-drifter::before {
+	background: url('../images/drifter.png') no-repeat 100%;
+	content: '';
+    position: absolute;
+    z-index: 1;
+    width: 65%;
+    height: 100%;
+    right: 0;
+    display: inline-block;
+    -webkit-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+}
+
 .section-3 {
-	background: $light-grey-bg url('../images/drifter.png') no-repeat 100%;
-	-webkit-background-size: 65% 100%;
-	     -o-background-size: 65% 100%;
-	        background-size: 65% 100%;
+	background-color: $light-grey-bg;
+}
+
+.section-drifter {
+    position: relative;
 }
 
 .drifter {
-	position: relative;
-	padding: 270px 0;
+	padding: 5% 0 ;
 }
 
 .drifter__title {
@@ -19,18 +33,19 @@
 
 .drifter__passage {
 	@extend .voyager__passage;
+	margin: 0;
 	
-	padding: 5% 0% 5% 5%; 
-	left: 1%;
+	padding: 5% 30% 5% 5%; 
 }
 
 .drifter__passage--right {
-	padding-right: 60%;
+	margin-right: 60%;
 }
 
 .drifter__passage::after {
 	@extend .voyager__passage::after;
 	
+	bottom: 35px;
     left: 13%;
     background-color: $light-grey-bg;  
 }
@@ -38,5 +53,7 @@
 .drifter__passage::before {
 	@extend .voyager__passage::before;
 	
-    left: 21%;
+	bottom: 0;
+    left: 0;
+    margin: 0 0 -9% 21%;
 }

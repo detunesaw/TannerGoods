@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,400" rel="stylesheet">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+	<script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
 </head>
 
 <body>
@@ -73,7 +78,24 @@
         </div>
     </div>
 </section>
+<section class="slider-gallery-1">
 
+	<div class="gallery">
+		<div class="gallery__image"><img src="images/voyager-slider-1.png" alt="voyager_1"></div>
+		<div class="gallery__image"><img src="images/voyager-slider-2.png" alt="voyager_2"></div>
+		<div class="gallery__image--active"><img src="images/voyager-slider-3.png" alt="voyager_3"></div>
+		<div class="gallery__image"><img src="images/voyager-slider-4.png" alt="voyager_3"></div>
+	</div>
+
+	<ul class="gallery-nav">
+		<li class="gallery-nav__item">01</li>
+		<li class="gallery-nav__item">02</li>
+		<li class="gallery-nav__item gallery-nav__item--hover slide-active">03</li>
+		<li class="gallery-nav__item">04</li>
+		<li class="gallery-nav__item">05</li>
+	</ul>
+	
+</section>
 <section class="section-3">
     <div class="section section-drifter">
         <div class="drifter">
@@ -94,6 +116,24 @@
 	            </div>
         </div>
     </div>
+    <section class="slider-gallery-2">
+
+	<div class="gallery">
+		<div class="gallery__image"><img src="images/drifter-slider-1.png" alt="voyager_1"></div>
+		<div class="gallery__image"><img src="images/drifter-slider-2.png" alt="voyager_2"></div>
+		<div class="gallery__image--active"><img src="images/drifter-slider-3.png" alt="voyager_3"></div>
+		<div class="gallery__image"><img src="images/drifter-slider-4.png" alt="voyager_3"></div>
+	</div>
+
+	<ul class="gallery-nav">
+		<li class="gallery-nav__item">01</li>
+		<li class="gallery-nav__item">02</li>
+		<li class="gallery-nav__item gallery-nav__item--hover slide-active">03</li>
+		<li class="gallery-nav__item">04</li>
+		<li class="gallery-nav__item">05</li>
+	</ul>
+	
+</section>
 </section>
 
 <section class="section-4">
@@ -102,6 +142,7 @@
         <br>
         <h3 class="tanner-subtitle">NAVY SALT & PEPPER</h3>
         <br>
+        
         <div class="tanner-1">
             <div class="tanner-1__image">
                 <img src="images/tanner-1.png" alt="tanner-1">
@@ -115,6 +156,7 @@
                 <a class="text__link" href="">read more</a>
             </div>
         </div>
+
         <div class="tanner-2">
             <div class="tanner-2__text">
                 <h5 class="text-title">
@@ -164,7 +206,6 @@
 
 <footer class="section-5">
     <div class="footer">
-        <div class="footer__wraper-1">
             <div class="footer__logo">
                 <img src="images/logo-2.png" alt="logo">
             </div>
@@ -189,9 +230,7 @@
                 <br>
                 <input class="form__field" type="text" name="Search" id="search" placeholder="Search">
                 <input class="form__button" type="submit" name="submit" id="submit" value="">
-            </form>
-        </div>
-        <div class="footer__wraper-2">
+            </form><br>
             <p class="footer__copyright">© tanner goods portland ore 2016</p>
             <nav class="footer__navigation-2">
                 <a class="navigation__link" href="">facebook</a>
@@ -199,9 +238,19 @@
                 <a class="navigation__link" href="">twitter</a>
                 <a class="navigation__link" href="">instagram</a>
             </nav>
-        </div>
     </div>
 </footer>
+
+  
+  <script>
+    $(function() {
+    $(".gallery-nav__item").click(function() {
+    $(".gallery-nav__item--hover").removeClass("gallery-nav__item--hover");
+    $(".slide-active").removeClass("slide-active");
+    $(this).addClass("gallery-nav__item--hover slide-active");
+  });
+});
+  </script>
 
 </body>
 </html>

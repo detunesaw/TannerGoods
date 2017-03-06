@@ -17,7 +17,7 @@
 
 .voyager
 {
-    padding: 5% 0 ;
+    padding: 5% 1% 5% 0;
 }
 
 .voyager__title
@@ -44,7 +44,7 @@
     margin-left: 30%;
     padding: 10% 0;
     max-width: 800px;
-    padding: 5% 5% 5% 0;
+    padding: 5% 5% 5% 5%;
 
     border: 3px solid $dark-flesh;
 }
@@ -54,11 +54,12 @@
     margin-left: 60%;
 }
 
-.voyager__passage::after
+.voyager::after
 {
     position: absolute;
-    right: 13%;
-    bottom: 36px;
+    right: 0;
+    bottom: 0;
+    margin: 0 7% 5% 0;
 
     width: 20%;
     height: 10px;
@@ -68,13 +69,13 @@
     background-color: white;
 }
 
-.voyager__passage::before
+.voyager::before
 {
     position: absolute;
     z-index: 1;
     right: 0;
     bottom: 0;
-    margin: 0 21% -9% 0;
+    margin: 0 15% -5% 0;
 
     width: 32px;
     height: 156px;

@@ -253,29 +253,24 @@
 
 }
 
-.slider-2__image {
-	display: inline-block;
-	width: 155px;
-	min-width: 7%;
-}
-
-.slider-2__bar {
-	position: absolute;
-	background: $dark-flesh;
-	width: 200px;
-	height: 500px;
-	content: '';
-	opacity: 0.39;
-	display: inline-block;
-	bottom: 45%;
-	right: 18%;
-}
-
 .darken {
 	display: inline-block;
     background: black;
     font-size: 0;
     margin: 1%;
+    width: 10%;
+}
+
+.darken:last-child::after {
+	margin: 0 0 8% 3%;
+	position: absolute;
+	background: $dark-flesh;
+	width: 10%;
+	height: 240%;
+	content: '';
+	opacity: 0.39;
+	display: inline-block;
+	bottom: 0;
 }
 
 .slider-2__image:hover {

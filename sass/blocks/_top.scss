@@ -1,19 +1,34 @@
+@mixin respond-to($media) {
+  @if $media == medium-screens {
+    @media only screen and (max-width: 1024px) { @content; }
+  }
+  @else if $media == smaller-screens {
+     @media only screen and (max-width: 768px) { @content; } 
+  }
+  @else if $media == small-screens {
+     @media only screen and (max-width: 505x) { @content; } 
+    }
+}
+
 .section-1::before {
 	content: '';
 	position: absolute;
 	z-index: -1;
 	width: 65%;
 	right: 0;
-	height: 85%;
+	height: 100%;
 	display: inline-block;
 	background: url('../images/home-slider.png') no-repeat 100%;
 	-webkit-background-size: cover;
 	     -o-background-size: cover;
 	        background-size: cover;
+	
+	@include respond-to(medium-screens) { width: 100%; }
 }
 
 .section-1 {
-	padding-bottom: 100px;
+	position: relative;
+	margin-bottom: 100px;
 }
 
 // NAVIGATION
@@ -28,6 +43,8 @@
 	padding-left: 1%;
 	width: 170px;
 	display: table-cell;
+	
+	@include respond-to(medium-screens) { width: 100px; }
 }
 
 .top__navigation {
@@ -41,6 +58,8 @@
 	font-family: 'MullerExtraBoldDemo';
 	font-size: 14px;
 	color: black;
+	
+	@include respond-to(medium-screens) { color: white; }
 }
 
 .navigation__link::before {
@@ -79,6 +98,8 @@
 	padding-left: 1%;
 	position: absolute;
 	width: 170px;
+	
+	@include respond-to(medium-screens) { display: none; }
 }
 
 .slider__navigationUp {
@@ -114,7 +135,7 @@
 	font-size: 14px;
 	font-weight: 700;
     text-align: center;
-    margin-bottom: 20%;
+    margin-bottom: 10%;
     cursor: pointer;
     transition: margin ease 0.1s;
 }
@@ -137,6 +158,8 @@
 
 .title {
 	padding: 5% 0 15% 15%;
+	@include respond-to(medium-screens) { padding: 5% 0 15% 5%; }
+
 }
 
 .title__link {
@@ -145,6 +168,8 @@
 	font-size: 18px;
 	font-weight: 400;
 	padding-left: 5%;
+	
+	@include respond-to(medium-screens) { color: black; }
 }
 
 .title__link::before {

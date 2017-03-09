@@ -1,3 +1,15 @@
+@mixin respond-to($media) {
+  @if $media == medium-screens {
+    @media only screen and (max-width: 1024px) { @content; }
+  }
+  @else if $media == smaller-screens {
+     @media only screen and (max-width: 768px) { @content; } 
+  }
+  @else if $media == small-screens {
+     @media only screen and (max-width: 505x) { @content; } 
+    }
+}
+
 .section-tanner {
 	max-width: 1200px;
 	margin: 5% auto 0;
@@ -12,6 +24,8 @@
 	padding-bottom: 0;
 	padding: 0.3% 15% 0.3% 0;
 	color: $bad-flesh;
+	
+	@include respond-to(medium-screens) { left: 50%; transform: translateX(-50%); }
 }
 
 .tanner-subtitle::before {
@@ -22,7 +36,9 @@
 	width: 100px;
 	vertical-align: middle;
 	margin-right: 10px;
-	border-bottom: 1px solid black;
+	border-bottom: 2px solid black;
+	
+	@include respond-to(medium-screens) { display: none; }
 }
 
 // SHIT TANNER
@@ -37,8 +53,8 @@
 }
 
 .tanner-2 {
-	min-height: 350px;
-	margin-top: -100px;
+	// min-height: 350px;
+    margin-top: -10%;
 	// top: -100px;
 }
 
@@ -57,7 +73,7 @@
 }
 
 .tanner-1__image {
-	width: 65%;
+	width: 60%;
 }
 
 .tanner-3__image {
@@ -85,17 +101,21 @@
 	letter-spacing: 10px;
 	position: absolute;
 	margin: -2.5% 0 0 3%;
+	
+	@include respond-to(medium-screens) { display: none; }
 
 }
 
 .tanner-1__image::after {
 	content: '';
-	margin: -45% 0 0 10%;
+	margin: -41.5% 0 0 10%;
 	position: absolute;
 	width: 150px;
 	vertical-align: middle;
 	margin-right: 10px;
 	border-bottom: 2px solid black;
+	
+	@include respond-to(medium-screens) { display: none; }
 }
 
 .tanner-2__image::after {
@@ -105,8 +125,10 @@
 	vertical-align: middle;
 	margin-right: 10px;
 	border-right: 2px solid black;
-	top: -15%;
-	right: 29%;
+	top: -20%;
+    right: 34%;
+	
+	@include respond-to(medium-screens) { display: none; }
 }
 
 .tanner-3__image::before {
@@ -114,6 +136,8 @@
 	content: "02";
 	top: -8%;
 	left: 95%;
+	
+	@include respond-to(medium-screens) { display: none; }
 }
 
 .tanner-4__image::before {
@@ -124,6 +148,8 @@
 	position: absolute;
 	top: 0%;
 	left: 96%;
+	
+	@include respond-to(medium-screens) { display: none; }
 }
 
 // SHIT TEXT
@@ -139,6 +165,10 @@
 	vertical-align: middle;
 }
 
+.tanner-1__text {
+	padding: 0 2% 8% 5%;
+}
+
 .tanner-1__text > h5::after {
 	content: '';
 	position: absolute;
@@ -146,11 +176,14 @@
 	vertical-align: middle;
 	margin-right: 10px;
 	border-right: 2px solid black;
-	bottom: 70%;
-	right: 29%;
+	bottom: 80%;
+    right: 34%;
+    
+	@include respond-to(medium-screens) { display: none; }
 }
 
 .tanner-2__text {
+	padding-top: 15%;
 	vertical-align: bottom;
 
 	> h5 {
@@ -168,6 +201,8 @@
 	top: 20%;
 	left: 3%;
 	z-index: -1;
+	
+	@include respond-to(medium-screens) { display: none; }
 }
 
 	> h5::after {
@@ -179,6 +214,8 @@
 	border-right: 2px solid black;
 	top: -650%;
 	left: 15%;
+	
+	@include respond-to(medium-screens) { display: none; }
 }
 
 }
@@ -188,7 +225,7 @@
 }
 
 .to-right--2 {
-	padding-left: 10%;
+	padding: 0 1% 0 5%;
 	vertical-align: top;
 }
 
@@ -209,6 +246,10 @@
 	text-align: justify;
 }
 
+.text__link-last {
+	margin-bottom: 25%;
+}
+
 .text__link::after {
 	content: '';
 	display: inline-block;
@@ -224,13 +265,16 @@
 	content: '';
 	position: absolute;
 	display: inline-block;
-	width: 100%;
+	width: 305px;
 	height: 100%;
-	top: 40%;
-	left: 41%;
+	top: 0;
+	right: 0;
 	background: url('../images/logo-2.png') no-repeat;
 	transform: scale(0.4);
 	opacity: 0.12;
+	margin: 18% 10% 0% 0%;
+	
+	@include respond-to(medium-screens) { display: none; }
 }
 
 .tanner__title-white {
@@ -239,17 +283,21 @@
 	text-shadow: 0px 13px 38px rgba(0, 15, 26, 0.27);
 	color: white;
 	font-family: 'Montserrat';
-	font-size: 52px;
+	font-size: calcFluidFontSize(24, 52, 480, 1600);
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 30px;
 	top: 51%;
     left: -1%;
+    
+    @include respond-to(medium-screens) { left: 50%; transform: translateX(-50%); }
 }
 
 .slider-2 {
 	padding: 0 0 7% 4%;
 	position: relative;
+	
+	@include respond-to(medium-screens) { text-align: center;}
 
 }
 
@@ -259,6 +307,7 @@
     font-size: 0;
     margin: 1%;
     width: 10%;
+    max-width: 150px;
 }
 
 .darken:last-child::after {
@@ -271,6 +320,9 @@
 	opacity: 0.39;
 	display: inline-block;
 	bottom: 0;
+	max-height: 590px;
+	
+	@include respond-to(medium-screens) { display: none; }
 }
 
 .slider-2__image:hover {

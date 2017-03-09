@@ -1,3 +1,24 @@
+@mixin respond-to($media) {
+  @if $media == medium-screens {
+    @media only screen and (max-width: 1024px) { @content; }
+  }
+  @else if $media == smaller-screens {
+     @media only screen and (max-width: 768px) { @content; } 
+  }
+  @else if $media == small-screens {
+     @media only screen and (max-width: 505x) { @content; } 
+    }
+}
+
+@function calcFluidFontSize($f-min, $f-max, $v-min, $v-max) {
+  $k: ($f-max - $f-min)/($v-max - $v-min);
+  $b: $f-min - $k * $v-min;
+
+  $b: $b * 1px;
+
+  @return calc( #{$k} * 100vw + #{$b} );
+}
+
 html,
 body
 {
@@ -21,7 +42,7 @@ img
 a
 {
     font-family: 'Montserrat';
-    font-size: 14px;
+    font-size: calcFluidFontSize(9, 14, 480, 1600);
     font-weight: 700;
     display: inline-block;
 
@@ -45,7 +66,8 @@ a
 h1
 {
     font-family: 'Montserrat';
-    font-size: 44px;
+    font-size: calcFluidFontSize(24, 44, 480, 1600);
+    
     font-weight: bold;
 
     padding-bottom: 40px;
@@ -55,6 +77,8 @@ h1
 
     color: #292929;
     text-shadow: 5px 26px 81px rgba(0, 15, 26, 0);
+    
+    @include respond-to(medium-screens) { color: white; }
 }
 
 h2
@@ -67,7 +91,7 @@ h2
 h3
 {
     font-family: 'Montserrat';
-    font-size: 18px;
+    font-size: calcFluidFontSize(14, 18, 480, 1600);
     font-weight: 400;
 
     display: inline-block;
@@ -75,12 +99,14 @@ h3
     margin-bottom: 20px;
 
     color: $light-grey-text;
+    
+    @include respond-to(medium-screens) { color: white; }
 }
 
 h4
 {
     font-family: 'Montserrat';
-    font-size: 48px;
+    font-size: calcFluidFontSize(26, 48, 480, 1600);
     font-weight: bold;
 
     text-align: center;
@@ -93,7 +119,7 @@ h4
 h5
 {
     font-family: 'Montserrat';
-    font-size: 22px;
+    font-size: calcFluidFontSize(13, 22, 480, 1600);
     font-weight: bold;
 
     letter-spacing: 5px;
@@ -105,8 +131,8 @@ h5
 p
 {
     font-family: 'Montserrat';
-    font-size: 14px;
-    font-weight: 400;
+    font-size: calcFluidFontSize(10, 12, 480, 1600);
+    font-weight: 300;
     line-height: 30px;
 
     color: $grey-passage;

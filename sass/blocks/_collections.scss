@@ -6,13 +6,17 @@
      @media only screen and (max-width: 768px) { @content; } 
   }
   @else if $media == small-screens {
-     @media only screen and (max-width: 505x) { @content; } 
+     @media only screen and (max-width: 620px) { @content; } 
     }
 }
 
 .section-tanner {
 	max-width: 1200px;
 	margin: 5% auto 0;
+}
+
+.mobile-only {
+	display: none !important;
 }
 
 // SECTION TOP
@@ -50,6 +54,8 @@
 	display: table;
 	width: 100%;
 	position: relative;
+	
+	@include respond-to(small-screens) { display: block; }
 }
 
 .tanner-2 {
@@ -70,10 +76,14 @@
 	display: table-cell;
 	vertical-align: middle;
 	width: 45%;
+	
+	@include respond-to(small-screens) { display: block;
+	width: 100%; }
 }
 
 .tanner-1__image {
 	width: 60%;
+	@include respond-to(small-screens) { width: 100%; }
 }
 
 .tanner-3__image {
@@ -163,6 +173,10 @@
 	padding-left: 5%;
 	display: table-cell;
 	vertical-align: middle;
+	
+	@include respond-to(medium-screens) { 
+	display: block;
+	padding-left: 0;}
 }
 
 .tanner-1__text {
@@ -189,6 +203,8 @@
 	> h5 {
 		padding-left: 13%;
 		position: relative;
+		
+		@include respond-to(medium-screens) { padding-left: 5%; }
 	}
 	
 	> h5::before {
@@ -222,6 +238,7 @@
 
 .to-right {
 	padding: 0 15% 0 15%;
+	@include respond-to(medium-screens) { padding: 0 2% 8% 5%; }
 }
 
 .to-right--2 {
@@ -258,7 +275,12 @@
 	vertical-align: middle;
 	margin-left: 10px;
 	background: url('../images/sprite.png') -113px -130px no-repeat;
-	transform: scale(0.6);
+	transform: scale(0.5);
+	margin-top: -2px;
+}
+
+.text__link-last::after {
+	@extend .text__link::after;
 }
 
 .tanner-1__text > .text__link::before {
@@ -288,16 +310,24 @@
 	text-transform: uppercase;
 	letter-spacing: 30px;
 	top: 51%;
-    left: -1%;
+    left: 3%;
     
-    @include respond-to(medium-screens) { left: 50%; transform: translateX(-50%); }
+    @include respond-to(small-screens) {
+    	position: static;
+		color: black;
+		font-family: 'Montserrat';
+		letter-spacing: 15px;
+		text-align: center;
+		margin-bottom: 5%;
+    	
+    }
 }
 
 .slider-2 {
 	padding: 0 0 7% 4%;
 	position: relative;
 	
-	@include respond-to(medium-screens) { text-align: center;}
+	@include respond-to(medium-screens) { text-align: left;}
 
 }
 
@@ -308,6 +338,8 @@
     margin: 1%;
     width: 10%;
     max-width: 150px;
+    
+    @include respond-to(medium-screens) { width: 20%; }
 }
 
 .darken:last-child::after {
@@ -327,4 +359,14 @@
 
 .slider-2__image:hover {
 	opacity: 0.5;
+}
+
+@media only screen and (max-width: 620px) {
+	.desktop-only {
+		display: none !important;
+	}
+
+	.mobile-only {
+		display: block !important;
+	}
 }

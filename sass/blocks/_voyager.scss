@@ -6,11 +6,11 @@
      @media only screen and (max-width: 768px) { @content; } 
   }
   @else if $media == small-screens {
-     @media only screen and (max-width: 505x) { @content; } 
+     @media only screen and (max-width: 620px) { @content; } 
     }
 }
 
-.section-2::before {
+#section-2::before {
 	background: url('../images/voyager.png') no-repeat 0;
 	content: '';
     position: absolute;
@@ -21,10 +21,13 @@
     -webkit-background-size: cover;
          -o-background-size: cover;
             background-size: cover;
+    
+    @include respond-to(medium-screens) { width: 100%; z-index: -1; }
 }
 
-.section-2 {
+#section-2 {
     position: relative;
+    @include respond-to(medium-screens) { background-color: rgba(black,0.3); }
 }
 
 .voyager
@@ -43,6 +46,13 @@
     max-width: 1000px;
 
     text-align: right;
+    
+    @include respond-to(medium-screens) { 
+    position: static;
+    z-index: none;
+    top: none;
+    transform: none;
+    max-width: none; }
 }
 
 .title__description
@@ -59,11 +69,19 @@
     padding: 5% 5% 5% 5%;
 
     border: 3px solid $dark-flesh;
+    
+    @include respond-to(medium-screens) { 
+    position: static;
+    margin: 10%;}
 }
 
 .voyager__passage--left
 {
     margin-left: 50%;
+    
+    @include respond-to(medium-screens) { 
+    margin-left: 0;
+    color: white;}
 }
 
 // .voyager::after

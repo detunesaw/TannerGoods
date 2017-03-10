@@ -6,11 +6,11 @@
      @media only screen and (max-width: 768px) { @content; } 
   }
   @else if $media == small-screens {
-     @media only screen and (max-width: 505x) { @content; } 
+     @media only screen and (max-width: 620px) { @content; } 
     }
 }
 
-.section-1::before {
+#section-1::before {
 	content: '';
 	position: absolute;
 	z-index: -1;
@@ -23,12 +23,19 @@
 	     -o-background-size: cover;
 	        background-size: cover;
 	
-	@include respond-to(medium-screens) { width: 100%; }
+	@include respond-to(medium-screens) { 
+		background: url('../images/home-slider.png') no-repeat 30%;
+		-webkit-background-size: cover;
+	     -o-background-size: cover;
+		background-size: cover;
+		width: 100%; }
 }
 
-.section-1 {
+#section-1 {
 	position: relative;
 	margin-bottom: 100px;
+	
+	@include respond-to(medium-screens) { height: 100vh; background-color: rgba(black,0.5); }
 }
 
 // NAVIGATION
@@ -53,16 +60,20 @@
 	padding-left: 4%;
 }
 
-.navigation__link {
+.navigation__link-top {
 	margin: 0 1%;
 	font-family: 'MullerExtraBoldDemo';
 	font-size: 14px;
 	color: black;
 	
-	@include respond-to(medium-screens) { color: white; }
+	@include respond-to(medium-screens) {
+	margin: 5%;
+	display: block;
+	color: white; 
+	text-align: right;}
 }
 
-.navigation__link::before {
+.navigation__link-top::before {
 	content: '';
 	display: inline-block;
 	width: 30px;
@@ -73,7 +84,7 @@
 	margin-top: -3px;
 }
 
-.navigation__link::after {
+.navigation__link-top::after {
 	content: '';
 	display: inline-block;
 	width: 4px;
@@ -87,8 +98,8 @@
 	margin-top: -3px;
 }
 
-.navigation__link:hover::before,
-.navigation__link:hover::after {
+.navigation__link-top:hover::before,
+.navigation__link-top:hover::after {
 	opacity: 100;
 }
 
@@ -158,7 +169,7 @@
 
 .title {
 	padding: 5% 0 15% 15%;
-	@include respond-to(medium-screens) { padding: 5% 0 15% 5%; }
+	@include respond-to(medium-screens) { padding: 25% 0 0% 10%; }
 
 }
 
@@ -169,12 +180,15 @@
 	font-weight: 400;
 	padding-left: 5%;
 	
-	@include respond-to(medium-screens) { color: black; }
+	@include respond-to(medium-screens) { color: white; 
+		padding: 20% 0 0 55%;
+	}
 }
 
 .title__link::before {
-	@extend .navigation__link::before;
+	@extend .navigation__link-top::before;
 	opacity: 100;
+	@include respond-to(medium-screens) { display: none; }
 }
 
 .title__link::after {

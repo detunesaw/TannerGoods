@@ -9,5 +9,14 @@
 });
   </script>
 
+  <script>
+  	$(function() {
+    $(".gallery__image").click(function() {
+    $(".gallery__image--active").removeClass("gallery__image--active");
+    $(this).addClass("gallery__image--active");
+  });
+});
+  </script>
+
 </body>
 </html>

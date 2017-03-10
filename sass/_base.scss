@@ -32,6 +32,7 @@ body
 {
     max-width: 1600px;
     margin: 0 auto 10% auto;
+    
 }
 
 img
@@ -42,7 +43,7 @@ img
 a
 {
     font-family: 'Montserrat';
-    font-size: calcFluidFontSize(9, 14, 480, 1600);
+    font-size: calcFluidFontSize(12, 14, 480, 1600);
     font-weight: 700;
     display: inline-block;
 
@@ -114,6 +115,8 @@ h4
     text-transform: uppercase;
 
     color: $light-grey-text;
+    
+    @include respond-to(medium-screens) { letter-spacing: 0px;}
 }
 
 h5
@@ -131,7 +134,7 @@ h5
 p
 {
     font-family: 'Montserrat';
-    font-size: calcFluidFontSize(10, 12, 480, 1600);
+    font-size: calcFluidFontSize(14, 16, 480, 1600);
     font-weight: 300;
     line-height: 30px;
 

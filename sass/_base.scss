@@ -6,7 +6,7 @@
      @media only screen and (max-width: 768px) { @content; } 
   }
   @else if $media == small-screens {
-     @media only screen and (max-width: 505x) { @content; } 
+     @media only screen and (max-width: 620px) { @content; } 
     }
 }
 
@@ -79,7 +79,7 @@ h1
     color: #292929;
     text-shadow: 5px 26px 81px rgba(0, 15, 26, 0);
     
-    @include respond-to(medium-screens) { color: white; }
+    @include respond-to(small-screens) { color: white; }
 }
 
 h2
@@ -101,7 +101,7 @@ h3
 
     color: $light-grey-text;
     
-    @include respond-to(medium-screens) { color: white; }
+    @include respond-to(small-screens) { color: white; }
 }
 
 h4

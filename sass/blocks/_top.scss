@@ -182,7 +182,7 @@
 	padding-left: 5%;
 	
 	@include respond-to(small-screens) { color: white; 
-		padding: 20% 0 0 55%;
+		padding: 10% 0 0 55%;
 	}
 }
 
@@ -201,4 +201,8 @@
 	margin-left: 5px;
 	background: url('../images/sprite.png') -113px -96px no-repeat;
 	transform: scale(0.4);
+}
+
+.title__link:hover {
+	color: darken($dark-flesh,15);
 }

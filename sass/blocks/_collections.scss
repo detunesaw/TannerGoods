@@ -54,6 +54,7 @@
 	display: table;
 	width: 100%;
 	position: relative;
+	top: 0;
 	
 	@include respond-to(small-screens) { display: block; }
 }
@@ -279,6 +280,11 @@
 	margin-top: -2px;
 }
 
+.text__link:hover,
+.text__link-last:hover {
+	margin-bottom: 1px;
+}
+
 .text__link-last::after {
 	@extend .text__link::after;
 }
@@ -288,13 +294,13 @@
 	position: absolute;
 	display: inline-block;
 	width: 305px;
-	height: 100%;
+	height: 150px;
 	top: 0;
 	right: 0;
 	background: url('../images/logo-2.png') no-repeat;
 	transform: scale(0.4);
 	opacity: 0.12;
-	margin: 18% 10% 0% 0%;
+	margin: 22% 13% 0% 0%;
 	
 	@include respond-to(medium-screens) { display: none; }
 }

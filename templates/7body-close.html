@@ -1,4 +1,8 @@
   
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
   <script>
     $(function() {
     $(".gallery-nav__item").click(function() {
@@ -17,6 +21,19 @@
   });
 });
   </script>
+
+<!--   <script>
+    var lastScrollTop = 0;
+    $(window).scroll(function (event) {
+    var st = $(this).scrollTop();
+    if (st > lastScrollTop) {
+        $('.tanner-1').animate({top: '-=1'}, 10);
+    } else {
+        $('.tanner-1').animate({top: '+=1'}, 10);
+    }
+    lastScrollTop = st;
+});
+  </script> -->
 
 </body>
 </html>

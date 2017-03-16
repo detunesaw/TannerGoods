@@ -22,6 +22,11 @@
     .gallery__image
     {
         display: inline-block;
+        -webkit-transition: width ease 0.1s;
+           -moz-transition: width ease 0.1s;
+            -ms-transition: width ease 0.1s;
+             -o-transition: width ease 0.1s;
+                transition: width ease 0.1s;
 
         width: 17%;
         margin: 0 2%;
@@ -34,7 +39,7 @@
         display: inline-block;
         max-width: 530px;
 
-        width: 30%;
+        width: 25%;
         @include respond-to(small-screens) { width: 70%; 
         margin: 5% 0;}
     }
@@ -43,11 +48,11 @@
         font-size: 26px;
         font-family: 'Montserrat';
         text-align: left;
-        padding: 3% 8% 5% 4%;
+        padding: 3% 5% 5% 4%;
         content: "$300.00";
         display: inline-block;
         width: 19%;
-        margin: 2% 0 0 -5%;
+        margin: 2% 0 0 -2%;
         border: 3px solid black;
         position: absolute;
         @include respond-to(small-screens) { 
@@ -64,6 +69,7 @@
     .gallery-nav__item {
     	font-family: 'Montserrat';
         font-size: 16px;
+        cursor: pointer;
 
         display: inline-block;
 
@@ -134,6 +140,11 @@
         width: 17%;
         margin: 0 2%;
         max-width: 300px;
+        -webkit-transition: width ease 0.1s;
+           -moz-transition: width ease 0.1s;
+            -ms-transition: width ease 0.1s;
+             -o-transition: width ease 0.1s;
+                transition: width ease 0.1s;
         
         @include respond-to(small-screens) { width: 30%; }
     }
@@ -142,7 +153,7 @@
     {
         display: inline-block;
 
-        width: 30%;
+        width: 25%;
         max-width: 530px;
         
         @include respond-to(small-screens) { width: 70%; 
@@ -153,11 +164,11 @@
         font-size: 26px;
         font-family: 'Montserrat';
         text-align: left;
-        padding: 3% 8% 5% 4%;
+        padding: 3% 5% 5% 4%;
         content: "$300.00";
         display: inline-block;
         width: 19%;
-        margin: 2% 0 0 -5%;
+        margin: 2% 0 0 -2%;
         border: 3px solid black;
         position: absolute;
         
@@ -175,6 +186,7 @@
     .gallery-nav__item {
         font-family: 'Montserrat';
         font-size: 16px;
+        cursor: pointer;
 
         display: inline-block;
 
